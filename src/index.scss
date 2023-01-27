@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;400;600&display=swap");
 
 $breakpoint-tablet: 768px;
+$container-height: 100px;
 
 * {
   padding: 0px;
@@ -48,6 +49,7 @@ $breakpoint-tablet: 768px;
 
     h2 {
       font-size: 14px;
+
       font-weight: 300;
     }
 
@@ -96,22 +98,16 @@ $breakpoint-tablet: 768px;
   position: relative;
   //   flex: 1;
   width: 100%;
+  //   height: $container-height;
   min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow-x: hidden;
-  background-color: red;
+  overflow: hidden;
 
   .containerWrap {
-    background-color: greenyellow;
-    width: 50%;
-    min-height: max-content;
-
+    width: 98%;
     position: absolute;
     top: 0;
+    bottom: 0;
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -120,6 +116,7 @@ $breakpoint-tablet: 768px;
 
     .container {
       //   background-color: rebeccapurple;
+      min-height: 500px;
       box-shadow: 0px 0px 20px -11px rgba(0, 0, 0, 0.7);
       border-radius: 4px;
       max-width: 700px;
@@ -147,7 +144,7 @@ $breakpoint-tablet: 768px;
     border: none;
     border-radius: 0.2rem;
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-    position: absolute;
+    position: fixed;
     bottom: 2rem;
     cursor: pointer;
     font-weight: 600;
@@ -165,7 +162,7 @@ $breakpoint-tablet: 768px;
   .backBtn {
     background-color: white;
     color: #1b72e8;
-    left: 6rem;
+    left: 20rem;
   }
 
   .nextBtn {
@@ -224,7 +221,7 @@ $breakpoint-tablet: 768px;
   }
 
   .mobileMenuicon {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,8 +248,6 @@ $breakpoint-tablet: 768px;
     position: absolute;
     top: 0;
     right: 0;
-    width: 300px;
-    height: 100vh;
     z-index: 3;
     overflow: hidden;
     // transform: translateX(100%);
@@ -263,10 +258,9 @@ $breakpoint-tablet: 768px;
     }
 
     .mobileNavigation {
-      padding: 0px 20px;
-      width: 80%;
+      padding: 0px 10px;
       height: 100vh;
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       z-index: 2;
@@ -277,6 +271,10 @@ $breakpoint-tablet: 768px;
 
       &.active {
         transform: translateX(0);
+        width: 260px;
+        display: flex;
+        justify-content: end;
+        align-items: flex-start;
       }
     }
   }
