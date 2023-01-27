@@ -150,17 +150,17 @@ const Document = () => {
 
       {/* button */}
 
-      {activeNumber !== 0 && (
-        <button className="backBtn" onClick={handleBack}>
-          Back
-        </button>
-      )}
+      {/* {activeNumber !== 0 && (
+          <button className="backBtn" onClick={handleBack}>
+            Back
+          </button>
+        )}
 
-      {activeNumber !== navigatinArray.length - 1 && (
-        <button className="nextBtn" onClick={handleNext}>
-          Next
-        </button>
-      )}
+        {activeNumber !== navigatinArray.length - 1 && (
+          <button className="nextBtn" onClick={handleNext}>
+            Next
+          </button>
+        )} */}
     </div>
   );
 };
