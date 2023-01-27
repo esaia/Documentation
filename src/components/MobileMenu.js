@@ -25,12 +25,10 @@ const MobileMenu = () => {
         {isNavActive ? <IoMdClose /> : <GiHamburgerMenu />}
       </div>
 
-      <div className={isNavActive ? "mobileMenu active" : "mobileMenu"}>
-        <div
-          className={
-            isNavActive ? "mobileNavigation active" : "mobileNavigation"
-          }
-        >
+      <div
+        className={isNavActive ? "mobileNavigation active" : "mobileNavigation"}
+      >
+        <div className="menu">
           <Navigation />
         </div>
       </div>
