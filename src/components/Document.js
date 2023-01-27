@@ -140,7 +140,7 @@ const Document = () => {
       let containerHeight =
         containerRef.current[activeNumber]?.getBoundingClientRect().height;
 
-      mainRef.current.style.height = `${containerHeight + 200}px`;
+      mainRef.current.style.height = `${containerHeight + 100}px`;
     }
     window.addEventListener("resize", handleResize);
 
