@@ -12,6 +12,7 @@ function App() {
 
       <MobileMenu />
 
+      <div className="space"></div>
       <Document />
     </div>
   );

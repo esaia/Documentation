@@ -134,7 +134,6 @@ const Document = () => {
   useEffect(() => {
     let containerHeight =
       containerRef.current[activeNumber]?.getBoundingClientRect().height;
-
     mainRef.current.style.height = `${containerHeight + 100}px`;
 
     function handleResize() {
@@ -142,7 +141,6 @@ const Document = () => {
         containerRef.current[activeNumber]?.getBoundingClientRect().height;
 
       mainRef.current.style.height = `${containerHeight + 200}px`;
-      console.log("rendered");
     }
     window.addEventListener("resize", handleResize);
 
@@ -155,7 +153,7 @@ const Document = () => {
     <div className="document" ref={mainRef}>
       {navigatinArray.map((item, i) => {
         let classname;
-
+        //  1         //0
         if (activeNumber === i) {
           classname = "containerWrap active";
         } else if (
@@ -166,6 +164,7 @@ const Document = () => {
         } else {
           classname = "containerWrap prev";
         }
+
         return (
           <div className={classname} key={i}>
             <div

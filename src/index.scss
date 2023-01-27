@@ -16,6 +16,10 @@ $container-height: 100px;
   //   height: 100vh;
   background-color: #f8f9fa;
 
+  .space {
+    width: 300px;
+  }
+
   .mynavigation {
     display: block;
     @media (max-width: $breakpoint-tablet) {
@@ -31,6 +35,9 @@ $container-height: 100px;
   flex-direction: column;
   overflow-y: scroll;
   margin-top: 20px;
+  position: fixed;
+  left: 0;
+  z-index: 20;
 
   .item {
     padding: 8px;
@@ -104,7 +111,7 @@ $container-height: 100px;
   overflow: hidden;
 
   .containerWrap {
-    width: 98%;
+    width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
