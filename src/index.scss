@@ -148,6 +148,16 @@ $breakpoint-tablet: 768px;
     cursor: pointer;
     font-weight: 600;
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    .backBtn {
+      left: 2rem !important;
+    }
+    .nextBtn {
+      right: 2rem !important;
+    }
+  }
+
   .backBtn {
     background-color: white;
     color: #1b72e8;
@@ -241,10 +251,11 @@ $breakpoint-tablet: 768px;
     height: 100vh;
     z-index: 3;
     overflow: hidden;
-    transform: translateX(100%);
+    // transform: translateX(100%);
+    pointer-events: none;
 
     &.active {
-      transform: translateX(0px);
+      pointer-events: auto;
     }
 
     .mobileNavigation {

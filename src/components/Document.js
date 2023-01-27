@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { ActiveNumberContextObj } from "../context/ActiveNumberProvider";
-import { createRoot } from "react-dom/client";
 
 const Document = () => {
   const introduction = (

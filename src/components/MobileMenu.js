@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import { ActiveNumberContextObj } from "../context/ActiveNumberProvider";
 import Navigation from "./Navigation";
 
 const MobileMenu = () => {
   const [isNavActive, setIsNavActive] = useState(false);
+  const { activeNumber } = useContext(ActiveNumberContextObj);
+
   const handleClick = () => {
     setIsNavActive(!isNavActive);
   };
+
+  useEffect(() => {
+    setIsNavActive(false);
+  }, [activeNumber]);
 
   return (
     <div className="mainFrame">
